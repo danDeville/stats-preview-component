@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(233, 47%, 7%);
+  font-family: 'Lexend Deca', 'Inter', sans-serif;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  max-width: 1440px;
+  border-radius: 5px;
+  background-color: hsl(244, 38%, 16%);
+  margin-bottom: 4rem;
+}
+
+.container-left {
+  padding: 3rem 6rem 3rem 3rem;
+  color: hsl(0, 0%, 100%);
+  flex-basis: 50%;
+}
+
+.container-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.container-left h1 span {
+  color: hsl(277, 64%, 61%)
+}
+
+.container-left p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75)
+}
+
+.container-left__charts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-left__charts h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0
+}
+
+.container-left__charts h2 span {
+  display: block;
+  margin-top: .5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.container-right {
+  position: relative;
+  flex-basis: 50%;
+  background-image: url('../images/image-header-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 5px 5px 0;
+}
+
+.container-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 61%);
+  opacity: .5;
+  border-radius: 0 5px 5px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-flow: column-reverse;
+    min-width: 320px;
+    height: 90vh
+  }
+
+  .container-left, .container-right {
+    flex-basis: 100%;
+  }
+
+  .container-left {
+    text-align: center;
+    padding: 1.5rem
+  }
+
+  .container-left h1 {
+    font-size: 2rem;
+  }
+
+  .container-left p {
+    line-height: 2;
+  }
+
+  .container-left__charts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-left__charts h2 {
+    margin-bottom: .8rem;
+  }
+
+  .container-right{
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+/* From FrontendMentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%)
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
